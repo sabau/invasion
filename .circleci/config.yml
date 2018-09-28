@@ -1,0 +1,62 @@
+version: 2
+
+container_config: &container_config
+  docker:
+    - image: circleci/node:10.11
+  working_directory: ~/invasion
+
+save_logs: &save_logs
+  store_artifacts:
+    path: ./logs
+    destination: logs
+
+jobs:
+  build:
+    <<: *container_config
+    steps:
+      - attach_workspace:
+          at: /tmp/build_output/
+      - checkout
+      - run:
+          name: Install node modules
+          command: npm install
+      - run:
+          name: check for compiler errors
+          command: npm run tsc
+
+      - run:
+          name: run tests with coverage
+          command: npm run test:ci
+          environment:
+            MOCHA_FILE: report/test-results.xml
+      - store_test_results:
+          path: report
+      - store_artifacts:
+          path: report
+          destination: report
+
+      - run:
+          name: compact coverage report
+          # for every folder in coverage/, archive the contents as a .tar.gz and remove the folder
+          command: for dir in $(find coverage/* -maxdepth 0 -type d -exec basename {} \;); do tar czf coverage/$dir{.tar.gz,} --remove-files; done
+      - store_artifacts:
+          path: coverage
+          destination: coverage
+      - run:
+          name: Perform tslint Check
+          command: npm run tslint
+
+      - run:
+          name: Building App
+          command: npm run build
+      - store_artifacts:
+          path: dist/
+          destination: invasion/
+
+## Workflow defining how jobs are connected.
+workflows:
+  version: 2
+  test-and-build:
+    jobs:
+     - build
+
