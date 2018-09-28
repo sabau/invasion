@@ -19,7 +19,7 @@
     "doc": "typedoc  --tsconfig tsconfig.doc.json",
     "test": "mocha --opts mocha.opts",
     "test:coverage": "nyc npm test",
-    "test:ci": "nyc npm test -- --reporter mocha-junit-reporter",
+    "test:ci": "nyc npm test -- --reporter=doc",
     "test:debug": "TS_NODE_CACHE_DIRECTORY=.cache/ts-node CACHE_REQUIRE_PATHS_FILE=.cache/require.json mocha $NODE_DEBUG_OPTION  --opts mocha.opts",
     "test:auto": "nodemon --exec npm test -- --inspect",
     "tsc": "tsc --noEmit",
