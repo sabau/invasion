@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+# Invasion [![CircleCI](https://circleci.com/gh/sabau/invasion/tree/master.svg?style=svg)](https://circleci.com/gh/sabau/invasion/tree/master)
 
-You can use the [editor on GitHub](https://github.com/sabau/invasion/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Aliens are popping up, will our cities survive?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Prerequisites
 
-### Markdown
+There are two possible ways of running the project:
+* nvm
+* node (system)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### nvm
 
-```markdown
-Syntax highlighted code block
+`nvm use`
 
-# Header 1
-## Header 2
-### Header 3
+### node
 
-- Bulleted
-- List
+* Required node version 10.11.*
+* Required npm version 6.4.*
 
-1. Numbered
-2. List
+## Run
 
-**Bold** and _Italic_ and `Code` text
+`npm start`
 
-[Link](url) and ![Image](src)
-```
+It's possible to specify both a path with a valid city map and the number of aliens:
+  - `npm run start -- --path=./my/map/file.txt aliens=10`
+  
+Or only the path to the city file and a random number of aliens
+  - `npm run start -- --path=./my/map/file.txt`
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Test
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sabau/invasion/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+`npm test`
 
-### Support or Contact
+## Build
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+`npm build`

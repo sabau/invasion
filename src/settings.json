@@ -1,0 +1,5 @@
+{
+  "world": "./src/World/fixtures/world",
+  "logfile": "./log/invasion.log",
+  "loglevel": "info"
+}
