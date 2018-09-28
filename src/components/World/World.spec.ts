@@ -1,18 +1,49 @@
 import {expect} from 'chai';
-import {initWorld, stringifyWorld} from './World';
+import {initWorld, parseCity, parseDirections, stringifyWorld} from './World';
 
 describe('Checking World', () => {
   describe('Ability to import world', () => {
-    const worldDescription = '';
 
     it('Should get empty world with empty string', () => {
-      const worldObject = initWorld(worldDescription);
-      expect(worldObject).to.be.deep.equal({cities: {}, roads: {}});
+      const worldObject = initWorld('');
+      expect(worldObject).to.be.deep.equal({});
     });
+
+    it('Should parse directions', () => {
+      const worldObject = parseDirections(['west=Foo', 'east=Bar']);
+      expect(worldObject).to.be.deep.equal({west: 'Foo', east: 'Bar'});
+    });
+
+
+    it('Should ignore wrong directions when parsing them', () => {
+      const worldObject = parseDirections(['westt=Foo', 'east=Bar']);
+      expect(worldObject).to.be.deep.equal({east: 'Bar'});
+    });
+
+    it('Should override duplicated directions when parsing them', () => {
+      const worldObject = parseDirections(['west=Foo', 'west=Bar']);
+      expect(worldObject).to.be.deep.equal({west: 'Bar'});
+    });
+
+    it('Should parseCity', () => {
+      const worldObject = parseCity('Foo');
+      expect(worldObject).to.be.deep.equal({Foo: {}});
+    });
+
+    it('Should parseCity with directions', () => {
+      const worldObject = parseCity('Foo west=Bar');
+      expect(worldObject).to.be.deep.equal({Foo: {west: 'Bar'}});
+    });
+
+    it('Should get a proper world', () => {
+      const worldObject = initWorld('./src/components/World/fixtures/world-looping');
+      expect(worldObject).to.be.deep.equal({Foo: {north: 'Bar'}, Bar: {south: 'Foo'}});
+    });
+
   });
 
   describe('Ability to print the world', () => {
-    const worldObject = {cities: {}, roads: {}};
+    const worldObject = {};
 
     it('should print an empty string if fed with empty world', () => {
       const worldString = stringifyWorld(worldObject);

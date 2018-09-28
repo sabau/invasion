@@ -1,10 +1,42 @@
 import {Logger} from 'components/Logger';
 import {Dict} from 'dict';
+import * as fs from 'fs';
 
-export type World = {
-  cities: Dict<string>;
-  roads: Dict<string>;
+export type CityName = string;
+
+// We will destroy cities but not routes from neightbours. They will be lazily removed once
+// someone try to reach that city.
+export type City = Partial<Routes>;
+
+export enum Direction {
+  north = 'north',
+  south = 'south',
+  west = 'west',
+  east = 'east'
+}
+
+export type Routes = {
+  [key in keyof typeof Direction]: CityName;
 };
+
+export type World = Dict<City>;
+
+export const parseDirections = (directions: string[]) => directions.reduce(
+  (routes: Routes, route: string) => {
+    const routePieces = route.split('=');
+    return {
+      ...routes,
+      ...(routePieces.length === 2 && routePieces[0] in Direction &&
+        {[routePieces[0]]: routePieces[1]})
+    };
+  },
+  {});
+
+
+export const parseCity = (cityText: string): World|undefined => {
+  const cityList = cityText.split(' ');
+  return cityList && {[cityList[0]]: {...parseDirections(cityList.slice(1))}};
+}
 
 /**
  *
@@ -12,8 +44,21 @@ export type World = {
  * @returns {World}
  */
 export const initWorld = (path: string): World => {
-  Logger.warn(path);
-  return {cities: {}, roads: {}};
+  let worldData = '';
+  if (fs.existsSync(path)) {
+    worldData = fs.readFileSync(path).toString();
+    console.log(worldData);
+    Logger.info(worldData);
+  }
+  worldData.split('\n').reduce(
+    (world: World, currentCity: string) => ({
+      ...world,
+      ...(currentCity && parseCity(currentCity))
+    }),
+    {}
+  );
+
+  return {};
 };
 
 /**
