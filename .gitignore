@@ -63,6 +63,7 @@ typings/
 
 .idea
 .cache
+test-results.html
 
 # TODO: removeme, here only until WIP
 dist/*

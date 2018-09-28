@@ -1,4 +1,4 @@
-# Invasion
+# Invasion [![CircleCI](https://circleci.com/gh/sabau/invasion/tree/master.svg?style=svg)](https://circleci.com/gh/sabau/invasion/tree/master)
 
 Aliens are popping up, will our cities survive?
 

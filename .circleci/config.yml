@@ -27,13 +27,11 @@ jobs:
       - run:
           name: run tests with coverage
           command: npm run test:ci
-          environment:
-            MOCHA_FILE: report/test-results.xml
       - store_test_results:
-          path: report
+          path: test-results.html
       - store_artifacts:
-          path: report
-          destination: report
+          path: test-results.html
+          destination: report/test-results.html
 
       - run:
           name: compact coverage report

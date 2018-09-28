@@ -19,7 +19,7 @@
     "doc": "typedoc  --tsconfig tsconfig.doc.json",
     "test": "mocha --opts mocha.opts",
     "test:coverage": "nyc npm test",
-    "test:ci": "nyc npm test -- --reporter=doc",
+    "test:ci": "npm run test -- --reporter=mocha-simple-html-reporter --reporter-options output=test-results.html ; nyc --report=html mocha --opts mocha.opts --exit",
     "test:debug": "TS_NODE_CACHE_DIRECTORY=.cache/ts-node CACHE_REQUIRE_PATHS_FILE=.cache/require.json mocha $NODE_DEBUG_OPTION  --opts mocha.opts",
     "test:auto": "nodemon --exec npm test -- --inspect",
     "tsc": "tsc --noEmit",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/sabau/invasion.git"
+    "url": "git+ssh://git@github.com/sabau/invasion.git"
   },
   "keywords": [
     "node",
@@ -41,9 +41,18 @@
   "author": "Karoly Szabo <szabo.karoly.a@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/sabau/invasion/issues"
+    "url": "https://github.com/sabau/invasion/issues"
   },
-  "homepage": "https://gitlab.com/sabau/invasion#readme",
+  "nyc": {
+    "extension": [".ts"],
+    "include": ["src/**/*.ts"],
+    "exclude": [ "src/**/*.d.ts", "src/**/*.spec.ts"],
+    "reporter": ["html", "text"],
+    "all": true,
+    "cache": true
+  },
+
+  "homepage": "https://github.com/sabau/invasion#readme",
   "devDependencies": {
     "@types/chai": "^4.1.5",
     "@types/lodash": "^4.14.116",
@@ -56,6 +65,7 @@
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
+    "mocha-simple-html-reporter": "^1.1.0",
     "nyc": "^13.0.1",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.6.0",
