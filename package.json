@@ -12,7 +12,7 @@
     "all-checks": "npm run tsc; npm run test -- --reporter dot; npm run tslint",
     "build": "npm run build:js && npm run build:types",
     "build:js": "tsc --outDir dist/",
-    "build:types": "tsc --outFile dist/index.d.ts --emitDeclarationOnly",
+    "build:types": "tsc  --declaration --outDir dist/ --emitDeclarationOnly",
     "clear-cache": "rm -rf .cache/*",
     "check": "npx npm-check -u --skip-unused",
     "doctoc": "doctoc",
