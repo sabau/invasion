@@ -88,12 +88,20 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#cleanneighbours" class="tsd-kind-icon">clean<wbr>Neighbours</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#destroycity" class="tsd-kind-icon">destroy<wbr>City</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#initworld" class="tsd-kind-icon">init<wbr>World</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#parsecity" class="tsd-kind-icon">parse<wbr>City</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#parsedirections" class="tsd-kind-icon">parse<wbr>Directions</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#stringifyroutes" class="tsd-kind-icon">stringify<wbr>Routes</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#stringifyworld" class="tsd-kind-icon">stringify<wbr>World</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_world_world_.html#validateworld" class="tsd-kind-icon">validate<wbr>World</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_world_world_.html#removeopposite" class="tsd-kind-icon">remove<wbr>Opposite</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,7 +115,7 @@
 					<div class="tsd-signature tsd-kind-icon">City<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L6">components/World/World.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L7">components/World/World.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +125,7 @@
 					<div class="tsd-signature tsd-kind-icon">City<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L4">components/World/World.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L5">components/World/World.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">Routes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L15">components/World/World.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L16">components/World/World.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -142,13 +150,71 @@
 					<div class="tsd-signature tsd-kind-icon">World<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#city" class="tsd-signature-type">City</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L19">components/World/World.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L20">components/World/World.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="cleanneighbours" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> clean<wbr>Neighbours</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">clean<wbr>Neighbours<span class="tsd-signature-symbol">(</span>world<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a>, city<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#cityname" class="tsd-signature-type">CityName</a>, routes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L109">components/World/World.ts:109</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>world: <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h5>
+								</li>
+								<li>
+									<h5>city: <a href="_components_world_world_.html#cityname" class="tsd-signature-type">CityName</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> routes: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="destroycity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> destroy<wbr>City</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">destroy<wbr>City<span class="tsd-signature-symbol">(</span>world<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a>, city<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#cityname" class="tsd-signature-type">CityName</a>, routes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L133">components/World/World.ts:133</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>world: <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h5>
+								</li>
+								<li>
+									<h5>city: <a href="_components_world_world_.html#cityname" class="tsd-signature-type">CityName</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> routes: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="initworld" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> init<wbr>World</h3>
@@ -159,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L50">components/World/World.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L59">components/World/World.ts:59</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -188,7 +254,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L40">components/World/World.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L49">components/World/World.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -217,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L25">components/World/World.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L34">components/World/World.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -248,7 +314,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L79">components/World/World.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L88">components/World/World.ts:88</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -271,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L89">components/World/World.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L98">components/World/World.ts:98</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -294,7 +360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/components/World/World.ts#L64">components/World/World.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L73">components/World/World.ts:73</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -314,6 +380,32 @@
 					</ul>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="removeopposite" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> remove<wbr>Opposite</h3>
+					<div class="tsd-signature tsd-kind-icon">remove<wbr>Opposite<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L22">components/World/World.ts:22</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="removeopposite.__computed" class="tsd-anchor"></a>
+						<h3>__computed</h3>
+						<div class="tsd-signature tsd-kind-icon">__computed<span class="tsd-signature-symbol">:</span> <a href="../enums/_components_world_world_.direction.html" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol"> =&nbsp;Direction.east</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L23">components/World/World.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L24">components/World/World.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L25">components/World/World.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/World/World.ts#L26">components/World/World.ts:26</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -328,6 +420,9 @@
 						<a href="_components_alien_alien_.html">"components/<wbr>Alien/<wbr>Alien"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_components_alien_alien_spec_.html">"components/<wbr>Alien/<wbr>Alien.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_components_logger_.html">"components/<wbr>Logger"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
@@ -338,6 +433,12 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_components_world_index_.html">"components/<wbr>World/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_components_helperes_.html">"components/helperes"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_components_helpers_spec_.html">"components/helpers.spec"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_types_.html">"types"</a>
@@ -362,6 +463,12 @@
 						<a href="_components_world_world_.html#world" class="tsd-kind-icon">World</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_components_world_world_.html#cleanneighbours" class="tsd-kind-icon">clean<wbr>Neighbours</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_components_world_world_.html#destroycity" class="tsd-kind-icon">destroy<wbr>City</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_components_world_world_.html#initworld" class="tsd-kind-icon">init<wbr>World</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
@@ -378,6 +485,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_components_world_world_.html#validateworld" class="tsd-kind-icon">validate<wbr>World</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_components_world_world_.html#removeopposite" class="tsd-kind-icon">remove<wbr>Opposite</a>
 					</li>
 				</ul>
 			</nav>

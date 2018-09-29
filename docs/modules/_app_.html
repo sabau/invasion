@@ -80,6 +80,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_app_.html#getcommandlineargs" class="tsd-kind-icon">get<wbr>Command<wbr>Line<wbr>Args</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_app_.html#iterate" class="tsd-kind-icon">iterate</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_app_.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
@@ -94,7 +95,7 @@
 					<div class="tsd-signature tsd-kind-icon">argv<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ParsedArgs</span><span class="tsd-signature-symbol"> =&nbsp;minimist(process.argv.slice(2), {string: [&#x27;path&#x27;, &#x27;aliens&#x27;]})</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/app.ts#L6">app.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/app.ts#L10">app.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -111,7 +112,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/app.ts#L23">app.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/app.ts#L49">app.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -125,6 +126,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="iterate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> iterate</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">iterate<span class="tsd-signature-symbol">(</span>initialWorld<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a>, initialAliens<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/app.ts#L21">app.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>initialWorld: <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h5>
+								</li>
+								<li>
+									<h5>initialAliens: <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="run" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> run</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
@@ -134,7 +161,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/b319845/src/app.ts#L17">app.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/app.ts#L42">app.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,6 +189,9 @@
 						<a href="_components_alien_alien_.html">"components/<wbr>Alien/<wbr>Alien"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_components_alien_alien_spec_.html">"components/<wbr>Alien/<wbr>Alien.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_components_logger_.html">"components/<wbr>Logger"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -172,6 +202,12 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_components_world_index_.html">"components/<wbr>World/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_components_helperes_.html">"components/helperes"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_components_helpers_spec_.html">"components/helpers.spec"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_types_.html">"types"</a>
@@ -185,6 +221,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_app_.html#getcommandlineargs" class="tsd-kind-icon">get<wbr>Command<wbr>Line<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_app_.html#iterate" class="tsd-kind-icon">iterate</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_app_.html#run" class="tsd-kind-icon">run</a>

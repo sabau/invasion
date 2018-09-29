@@ -99,7 +99,13 @@ export const stringifyWorld = (world: World) => {
   return Object.keys(world).map(city => `${city}${stringifyRoutes(world[city])}`).join('\n');
 };
 
-
+/**
+ *
+ * @param {World} world
+ * @param {CityName} city
+ * @param {Partial<Routes>} routes
+ * @returns {string}
+ */
 export const cleanNeighbours = (
   world: World, city: CityName, routes: Partial<Routes> = {}
 ): World => Object.keys(routes)
@@ -117,6 +123,13 @@ export const cleanNeighbours = (
     },
     {});
 
+/**
+ *
+ * @param {World} world
+ * @param {CityName} city
+ * @param {Partial<Routes>} routes
+ * @returns {string}
+ */
 export const destroyCity = (world: World, city: CityName, routes?: Partial<Routes>): World => {
   const newWorld = {
     ...world,

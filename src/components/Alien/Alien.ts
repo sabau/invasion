@@ -9,6 +9,12 @@ export type Alien = {
 
 export type AlienMap = Dict<Alien[]>;
 
+/**
+ *
+ * @param {World} world
+ * @param {number} aliens
+ * @returns {string}
+ */
 export const generateAliens = (world: World, aliens: number) => {
   const keys = Object.keys(world);
   let alienMap: Dict<Alien[]> = {};
