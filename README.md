@@ -27,6 +27,9 @@ It's possible to specify both a path with a valid city map and the number of ali
 Or only the path to the city file and a random number of aliens
   - `npm run start -- --path=./my/map/file.txt`
 
+A ready to launch example
+`npm start -- --path=./src/components/World/fixtures/world`
+
 
 ## Test
 

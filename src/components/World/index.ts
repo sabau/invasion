@@ -1,1 +1,8 @@
-export {World, initWorld, stringifyWorld, parseDirections, parseCity, validateWorld} from './World';
+export {
+  World,
+  initWorld,
+  parseDirections,
+  parseCity,
+  validateWorld,
+  stringifyWorld,
+  stringifyRoutes} from './World';

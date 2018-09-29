@@ -1,6 +1,6 @@
 import {Logger} from 'components/Logger';
 import * as minimist from 'minimist';
-import {initWorld, stringifyWorld} from 'components/World';
+import {initWorld, stringifyWorld, validateWorld} from 'components/World';
 import {CommandLineArgs} from './types';
 
 const argv = minimist(process.argv.slice(2), {string: ['path', 'aliens']});
@@ -16,6 +16,7 @@ if (!('path' in argv || 'aliens' in argv)) {
 
 const run = async (argv: CommandLineArgs) => {
   const world = initWorld(argv.path);
+  if (!validateWorld(world)) throw new Error('World definition not consistent');
   return stringifyWorld(world);
 };
 
