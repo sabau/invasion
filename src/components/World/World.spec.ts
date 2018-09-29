@@ -1,5 +1,7 @@
 import {expect} from 'chai';
 import {
+  cleanNeighbours,
+  destroyCity,
   initWorld,
   parseCity,
   parseDirections,
@@ -57,6 +59,17 @@ describe('Checking World', () => {
       expect(validateWorld(worldObject)).to.be.false;
     });
 
+  });
+
+  describe('Ability to destroy the world', () => {
+    it('Should clean neighbours cities if asked to', () => {
+      const worldObject = {Foo: {north: 'Bar'}, Bar: {south: 'Foo'}};
+      expect(cleanNeighbours(worldObject, 'Bar', worldObject.Bar)).to.be.deep.equal({Foo: {}});
+    });
+    it('Should kill a city invalid world', () => {
+      const worldObject = {Foo: {north: 'Bar'}, Bar: {south: 'Foo'}};
+      expect(destroyCity(worldObject, 'Bar', worldObject.Bar)).to.be.deep.equal({Foo: {}});
+    });
   });
 
   describe('Ability to print the world', () => {
