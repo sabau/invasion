@@ -1,5 +1,14 @@
 import {expect} from 'chai';
-import {initWorld, parseCity, parseDirections, stringifyWorld, validateWorld} from './World';
+import {
+  cleanNeighbours,
+  destroyCity,
+  initWorld,
+  parseCity,
+  parseDirections,
+  stringifyRoutes,
+  stringifyWorld,
+  validateWorld
+} from './World';
 
 describe('Checking World', () => {
   describe('Ability to import world', () => {
@@ -52,12 +61,37 @@ describe('Checking World', () => {
 
   });
 
+  describe('Ability to destroy the world', () => {
+    it('Should clean neighbours cities if asked to', () => {
+      const worldObject = {Foo: {north: 'Bar'}, Bar: {south: 'Foo'}};
+      expect(cleanNeighbours(worldObject, 'Bar', worldObject.Bar)).to.be.deep.equal({Foo: {}});
+    });
+    it('Should kill a city invalid world', () => {
+      const worldObject = {Foo: {north: 'Bar'}, Bar: {south: 'Foo'}};
+      expect(destroyCity(worldObject, 'Bar', worldObject.Bar)).to.be.deep.equal({Foo: {}});
+    });
+  });
+
   describe('Ability to print the world', () => {
-    const worldObject = {};
 
     it('should print an empty string if fed with empty world', () => {
-      const worldString = stringifyWorld(worldObject);
-      expect(worldString).to.be.deep.equal('');
+      const worldString = stringifyWorld({});
+      expect(worldString).to.be.equal('');
+    });
+
+    it('should print an easy world string if fed with looping world', () => {
+      const worldString = stringifyWorld({Foo: {north: 'Bar'}, Bar: {south: 'Foo'}});
+      expect(worldString).to.be.equal('Foo north=Bar\nBar south=Foo');
+    });
+
+    it('should print an empty string if fed with empty routes', () => {
+      const worldString = stringifyRoutes({});
+      expect(worldString).to.be.equal('');
+    });
+
+    it('should print a single route if fed with a single route', () => {
+      const worldString = stringifyRoutes({north: 'Bar'});
+      expect(worldString).to.be.equal(' north=Bar');
     });
   });
 });
