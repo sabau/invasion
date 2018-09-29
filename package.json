@@ -44,14 +44,23 @@
     "url": "https://github.com/sabau/invasion/issues"
   },
   "nyc": {
-    "extension": [".ts"],
-    "include": ["src/**/*.ts"],
-    "exclude": [ "src/**/*.d.ts", "src/**/*.spec.ts"],
-    "reporter": ["html", "text"],
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.d.ts",
+      "src/**/*.spec.ts"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
     "all": true,
     "cache": true
   },
-
   "homepage": "https://github.com/sabau/invasion#readme",
   "devDependencies": {
     "@types/chai": "^4.1.5",
@@ -66,6 +75,7 @@
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
     "mocha-simple-html-reporter": "^1.1.0",
+    "nodemon": "^1.18.4",
     "nyc": "^13.0.1",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.6.0",

@@ -32,11 +32,10 @@ export const parseDirections = (directions: string[]) => directions.reduce(
   },
   {});
 
-
-export const parseCity = (cityText: string): World|undefined => {
+export const parseCity = (cityText: string): World => {
   const cityList = cityText.split(' ');
-  return cityList && {[cityList[0]]: {...parseDirections(cityList.slice(1))}};
-}
+  return cityText.length > 0 ? {[cityList[0]]: {...parseDirections(cityList.slice(1))}} : {};
+};
 
 /**
  *
@@ -47,18 +46,18 @@ export const initWorld = (path: string): World => {
   let worldData = '';
   if (fs.existsSync(path)) {
     worldData = fs.readFileSync(path).toString();
-    console.log(worldData);
-    Logger.info(worldData);
   }
-  worldData.split('\n').reduce(
-    (world: World, currentCity: string) => ({
-      ...world,
-      ...(currentCity && parseCity(currentCity))
-    }),
-    {}
-  );
+  return worldData.split('\n').reduce(
+    (world: World, currentCity: string) => ({...world, ...parseCity(currentCity)}), {});
+};
 
-  return {};
+export const validateWorld = (world: World) => {
+  // Every route defined in a city
+  return Object.values(world)
+    // should ve valid and each destination defined in those routes
+    .every(routes => !!(routes && Object.values(routes)
+      // Must point to a city that exists in the map
+      .every((destination) => !!(destination && world[destination]))));
 };
 
 /**

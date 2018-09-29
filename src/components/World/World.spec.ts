@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {initWorld, parseCity, parseDirections, stringifyWorld} from './World';
+import {initWorld, parseCity, parseDirections, stringifyWorld, validateWorld} from './World';
 
 describe('Checking World', () => {
   describe('Ability to import world', () => {
@@ -38,6 +38,16 @@ describe('Checking World', () => {
     it('Should get a proper world', () => {
       const worldObject = initWorld('./src/components/World/fixtures/world-looping');
       expect(worldObject).to.be.deep.equal({Foo: {north: 'Bar'}, Bar: {south: 'Foo'}});
+    });
+
+    it('Should accept valid world', () => {
+      const worldObject = initWorld('./src/components/World/fixtures/world-looping');
+      expect(validateWorld(worldObject)).to.be.true;
+    });
+
+    it('Should reject invalid world', () => {
+      const worldObject = initWorld('./src/components/World/fixtures/world-inconsistent');
+      expect(validateWorld(worldObject)).to.be.false;
     });
 
   });
