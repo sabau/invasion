@@ -44,20 +44,10 @@
     "url": "https://github.com/sabau/invasion/issues"
   },
   "nyc": {
-    "extension": [
-      ".ts"
-    ],
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "src/**/*.d.ts",
-      "src/**/*.spec.ts"
-    ],
-    "reporter": [
-      "html",
-      "text"
-    ],
+    "extension": [".ts"],
+    "include": ["src/**/*.ts"],
+    "exclude": [ "src/**/*.d.ts", "src/**/*.spec.ts"],
+    "reporter": ["html", "text"],
     "all": true,
     "cache": true
   },
