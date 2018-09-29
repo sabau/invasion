@@ -1,5 +1,6 @@
 import {Dict} from 'dict';
 import * as fs from 'fs';
+import {omit} from 'lodash';
 
 export type CityName = string;
 
@@ -17,6 +18,14 @@ export type Routes = {
 };
 
 export type World = Dict<City>;
+
+export const removeOpposite: Routes = {
+  [Direction.north]: Direction.south,
+  [Direction.south]: Direction.north,
+  [Direction.east]: Direction.west,
+  [Direction.west]: Direction.east
+};
+
 
 /**
  * @param {string[]} directions Textual representation of directions `west=Foo`
@@ -90,3 +99,28 @@ export const stringifyWorld = (world: World) => {
   return Object.keys(world).map(city => `${city}${stringifyRoutes(world[city])}`).join('\n');
 };
 
+
+export const cleanNeighbours = (
+  world: World, city: CityName, routes: Partial<Routes> = {}
+): World => Object.keys(routes)
+  .reduce(
+    (prev: World, direction: Direction) => {
+      const cityToUpdate: CityName|undefined = routes[direction];
+      if (cityToUpdate !== undefined) {
+        const newCity = {[cityToUpdate]: omit(world[cityToUpdate], [removeOpposite[direction]])};
+        return {
+          ...prev,
+          ...newCity
+        };
+      }
+      return prev;
+    },
+    {});
+
+export const destroyCity = (world: World, city: CityName, routes?: Partial<Routes>): World => {
+  const newWorld = {
+    ...world,
+    ...cleanNeighbours(world, city, routes)
+  };
+  return omit(newWorld, city);
+};
