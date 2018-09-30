@@ -84,4 +84,4 @@ export const moveAliens = (aliens: Dict<Alien[]>, world: World): Dict<Alien[]> =
       return prev;
     },
     {});
-}
+};
