@@ -80,7 +80,9 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_alien_alien_.html#alienmeetings" class="tsd-kind-icon">alien<wbr>Meetings</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_alien_alien_.html#generatealiens" class="tsd-kind-icon">generate<wbr>Aliens</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_components_alien_alien_.html#movealiens" class="tsd-kind-icon">move<wbr>Aliens</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,7 +96,7 @@
 					<div class="tsd-signature tsd-kind-icon">Alien<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/Alien/Alien.ts#L5">components/Alien/Alien.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/Alien/Alien.ts#L8">components/Alien/Alien.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -115,13 +117,46 @@
 					<div class="tsd-signature tsd-kind-icon">Alien<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/Alien/Alien.ts#L10">components/Alien/Alien.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/Alien/Alien.ts#L13">components/Alien/Alien.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="alienmeetings" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> alien<wbr>Meetings</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">alien<wbr>Meetings<span class="tsd-signature-symbol">(</span>aliens<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, world<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_.html#status" class="tsd-signature-type">Status</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/Alien/Alien.ts#L45">components/Alien/Alien.ts:45</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>In this function all the alien meeting are taken care of. If city contains more than 1 alien,
+										it vanishes, and all the aliens that were there will be deleted too. All neighbours must
+									remove their roads to the destroyed city</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>aliens: <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>world: <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_.html#status" class="tsd-signature-type">Status</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="generatealiens" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> generate<wbr>Aliens</h3>
@@ -132,9 +167,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/00c7ec4/src/components/Alien/Alien.ts#L18">components/Alien/Alien.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/Alien/Alien.ts#L22">components/Alien/Alien.ts:22</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Here we take care of assigning random cities to the aliens.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -150,6 +190,38 @@
 									<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 								</li>
 							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="movealiens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> move<wbr>Aliens</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">move<wbr>Aliens<span class="tsd-signature-symbol">(</span>aliens<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, world<span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#world" class="tsd-signature-type">World</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/Alien/Alien.ts#L69">components/Alien/Alien.ts:69</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function takes care of moving the aliens on neighbouring cities, isolated aliens will be
+									eliminated from the alien list.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>aliens: <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>world: <a href="_components_world_world_.html#world" class="tsd-signature-type">World</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_alien_alien_.html#alien" class="tsd-signature-type">Alien</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -169,6 +241,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_components_alien_alien_spec_.html">"components/<wbr>Alien/<wbr>Alien.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_components_alien_index_.html">"components/<wbr>Alien/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_components_logger_.html">"components/<wbr>Logger"</a>
@@ -202,7 +277,13 @@
 						<a href="_components_alien_alien_.html#alienmap" class="tsd-kind-icon">Alien<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_components_alien_alien_.html#alienmeetings" class="tsd-kind-icon">alien<wbr>Meetings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_components_alien_alien_.html#generatealiens" class="tsd-kind-icon">generate<wbr>Aliens</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_components_alien_alien_.html#movealiens" class="tsd-kind-icon">move<wbr>Aliens</a>
 					</li>
 				</ul>
 			</nav>

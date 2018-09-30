@@ -5,4 +5,7 @@ export {
   parseCity,
   validateWorld,
   stringifyWorld,
-  stringifyRoutes} from './World';
+  stringifyRoutes,
+  CityName,
+  destroyCity
+} from './World';
