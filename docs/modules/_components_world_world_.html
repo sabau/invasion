@@ -115,7 +115,7 @@
 					<div class="tsd-signature tsd-kind-icon">City<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#routes" class="tsd-signature-type">Routes</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L7">components/World/World.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L7">components/World/World.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,7 +125,7 @@
 					<div class="tsd-signature tsd-kind-icon">City<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L5">components/World/World.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L5">components/World/World.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">Routes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L16">components/World/World.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L16">components/World/World.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -150,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">World<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><a href="_components_world_world_.html#city" class="tsd-signature-type">City</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L20">components/World/World.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L20">components/World/World.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,9 +167,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L109">components/World/World.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L119">components/World/World.ts:119</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Cleaning the neighours after a city got destroyed. Here we remove all the routes to the
+									destroyed city, we return only the portion of the world containing the touched cities.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -196,9 +202,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L133">components/World/World.ts:133</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L145">components/World/World.ts:145</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function takes a whole world as argument and, besides removing the city from this world,
+									it also clean the neighbours. It return a full representation of the world with the city deleted.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -225,9 +237,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L59">components/World/World.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L65">components/World/World.ts:65</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function takes a files and try to inizialize a world from its content.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -254,9 +271,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L49">components/World/World.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L54">components/World/World.ts:54</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function parse a string representing a city with its roads and try to return an entry of the
+									World from it.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -277,15 +300,21 @@
 					<a name="parsedirections" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> parse<wbr>Directions</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Directions<span class="tsd-signature-symbol">(</span>directions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Directions<span class="tsd-signature-symbol">(</span>directions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_world_world_.html#city" class="tsd-signature-type">City</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L34">components/World/World.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L36">components/World/World.ts:36</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function receive an array of <code>direction=destination</code> strings where direction in [north,
+									south, west, ovest] and destination is a CityName. It returns an object to represent the roads.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -297,10 +326,8 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_components_world_world_.html#city" class="tsd-signature-type">City</a></h4>
 							<p>Object representing the routes from a city to others</p>
-							<ul class="tsd-parameters">
-							</ul>
 						</li>
 					</ul>
 				</section>
@@ -314,9 +341,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L88">components/World/World.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L95">components/World/World.ts:95</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return a string that represent the routes in a city object</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -337,9 +369,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L98">components/World/World.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L106">components/World/World.ts:106</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Function to print a textual representation of the world</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -360,9 +397,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L73">components/World/World.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L79">components/World/World.ts:79</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function make a loose validation of the world. It check only that destinations does exists</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -388,7 +430,7 @@
 					<div class="tsd-signature tsd-kind-icon">remove<wbr>Opposite<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L22">components/World/World.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L22">components/World/World.ts:22</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -397,10 +439,10 @@
 						<div class="tsd-signature tsd-kind-icon">__computed<span class="tsd-signature-symbol">:</span> <a href="../enums/_components_world_world_.direction.html" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol"> =&nbsp;Direction.east</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L23">components/World/World.ts:23</a></li>
-								<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L24">components/World/World.ts:24</a></li>
-								<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L25">components/World/World.ts:25</a></li>
-								<li>Defined in <a href="https://github.com/sabau/invasion/blob/e03ba11/src/components/World/World.ts#L26">components/World/World.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L23">components/World/World.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L24">components/World/World.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L25">components/World/World.ts:25</a></li>
+								<li>Defined in <a href="https://github.com/sabau/invasion/blob/ca7ccde/src/components/World/World.ts#L26">components/World/World.ts:26</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -442,6 +484,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_components_helpers_spec_.html">"components/helpers.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_constants_.html">"constants"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_types_.html">"types"</a>
