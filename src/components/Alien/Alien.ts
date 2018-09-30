@@ -1,8 +1,8 @@
-import {CityName, destroyCity, World} from 'components/World/World';
-import {randomInt} from 'components/helperes';
+import {CityName, destroyCity, World} from '../World';
+import {randomInt} from '../helperes';
 import {Dict} from 'dict';
-import {Status} from 'src/app';
-import {Logger} from 'components/Logger';
+import {Status} from '../../app';
+import {Logger} from '../Logger';
 import {omit} from 'lodash';
 
 export type Alien = {

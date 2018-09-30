@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {randomInt} from 'components/helperes';
+import {randomInt} from './helperes';
 
 describe('Checking Helpers', () => {
   it('should generate random number within boundaries', () => {

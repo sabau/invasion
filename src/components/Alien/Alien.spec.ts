@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {alienMeetings, generateAliens, moveAliens} from 'components/Alien/Alien';
+import {alienMeetings, generateAliens, moveAliens} from './Alien';
 
 describe('Checking Alien', () => {
   describe('Ability to generate aliens', () => {

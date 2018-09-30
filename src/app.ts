@@ -1,8 +1,8 @@
-import {Logger} from 'components/Logger';
+import {Logger} from './components/Logger';
 import * as minimist from 'minimist';
-import {initWorld, stringifyWorld, validateWorld, World} from 'components/World';
+import {initWorld, stringifyWorld, validateWorld, World} from './components/World';
 import {CommandLineArgs} from './types';
-import {Alien, alienMeetings, generateAliens, moveAliens} from 'components/Alien/Alien';
+import {Alien, alienMeetings, generateAliens, moveAliens} from './components/Alien';
 import {Dict} from 'dict';
 
 const argv = minimist(process.argv.slice(2), {string: ['path', 'aliens']});
