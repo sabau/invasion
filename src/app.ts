@@ -2,10 +2,8 @@ import {Logger} from 'components/Logger';
 import * as minimist from 'minimist';
 import {initWorld, stringifyWorld, validateWorld, World} from 'components/World';
 import {CommandLineArgs} from './types';
-import {Alien, generateAliens} from 'components/Alien/Alien';
+import {Alien, alienMeetings, generateAliens, moveAliens} from 'components/Alien/Alien';
 import {Dict} from 'dict';
-import {omit} from 'lodash';
-import {CityName, destroyCity, Direction, Routes} from 'components/World/World';
 
 const argv = minimist(process.argv.slice(2), {string: ['path', 'aliens']});
 
@@ -18,24 +16,21 @@ if (!('path' in argv || 'aliens' in argv)) {
   process.exit(0);
 }
 
+export type Status = {
+  world: World;
+  aliens: Dict<Alien[]>;
+};
+
 const iterate = (initialWorld: World, initialAliens: Dict<Alien[]>) => {
   let round = 0;
   let world = initialWorld;
   let aliens = initialAliens;
-  console.log(world);
   do {
-    Object.keys(aliens).forEach(city => {
-      const alienList = aliens[city];
-      if (alienList && alienList.length > 1) {
-        Logger.info(
-          `${city} gets destroyed by the meeting of ${alienList.map(a => `${a.name}`).join(',')}`);
-
-        world = destroyCity(world, city, world[city]);
-        aliens = omit(aliens, city);
-      }
-    });
+    const {world: newWorld, aliens: newAliens} = alienMeetings(aliens, world);
+    world = newWorld;
+    aliens = moveAliens(newAliens, newWorld);
     round++;
-  } while (round < 10000 && Object.keys(aliens).length > 0);
+  } while (round < 1000 && Object.keys(aliens).length > 0);
   return world;
 };
 
@@ -51,7 +46,7 @@ const getCommandLineArgs = (argv: minimist.ParsedArgs): CommandLineArgs =>
 
 run(getCommandLineArgs(argv)).then((result) => {
   Logger.info('This is what remains of our world:');
-  Logger.info(result);
+  Logger.info(`\n*************************\n${result}\n*************************\n`);
   process.exit(0);
 }).catch((error: Error) => {
   console.error('Failed executing job for', process.argv.slice(2), error);
