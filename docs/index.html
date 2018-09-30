@@ -65,22 +65,31 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="invasion-circleci">Invasion <a href="https://circleci.com/gh/sabau/invasion/tree/master"><img src="https://circleci.com/gh/sabau/invasion/tree/master.svg?style=svg" alt="CircleCI"></a></h1>
-				<p>Aliens are popping up, will our cities survive?</p>
+				<p>Aliens are popping up, will the cities of world X survive?</p>
 				<h2 id="prerequisites">Prerequisites</h2>
-				<p>There are two possible ways of running the project:</p>
+				<p>There are two ways of running the project:</p>
 				<ul>
 					<li>nvm</li>
 					<li>node (system)</li>
 				</ul>
 				<h3 id="nvm">nvm</h3>
+				<p>To switch to the right version of node use:</p>
 				<p><code>nvm use</code></p>
 				<h3 id="node">node</h3>
 				<ul>
 					<li>Required node version 10.11.*</li>
 					<li>Required npm version 6.4.*</li>
 				</ul>
+				<h2 id="install">Install</h2>
+				<p>To install the project it&#39;s sufficient to run:</p>
+				<p><code>npm i</code></p>
 				<h2 id="run">Run</h2>
+				<p>To run a simulation you should run, with the proper parameters, the command:</p>
 				<p><code>npm start</code></p>
+				<ul>
+					<li>--path=./relative/path/to/world.txt</li>
+					<li>--aliens=1000 (optional) number of aliens in the simulation</li>
+				</ul>
 				<p>It&#39;s possible to specify both a path with a valid city map and the number of aliens:</p>
 				<ul>
 					<li><code>npm run start -- --path=./my/map/file.txt aliens=10</code></li>
@@ -92,8 +101,10 @@
 				<p>A ready to launch example
 				<code>npm start -- --path=./src/components/World/fixtures/world</code></p>
 				<h2 id="test">Test</h2>
+				<p>In order to run all the tests you may run:</p>
 				<p><code>npm test</code></p>
 				<h2 id="build">Build</h2>
+				<p>To have a version running in pure JS, along with the definitions file, to build an exportable package, you can run:</p>
 				<p><code>npm build</code></p>
 			</div>
 		</div>
@@ -132,6 +143,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_components_helpers_spec_.html">"components/helpers.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_constants_.html">"constants"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_types_.html">"types"</a>

@@ -4,7 +4,7 @@ import {initWorld, stringifyWorld, validateWorld, World} from './components/Worl
 import {CommandLineArgs} from './types';
 import {Alien, alienMeetings, generateAliens, moveAliens} from './components/Alien';
 import {Dict} from 'dict';
-import {MAX_ROUNDS} from 'src/constants';
+import {MAX_ROUNDS} from './constants';
 
 const argv = minimist(process.argv.slice(2), {string: ['path', 'aliens']});
 
