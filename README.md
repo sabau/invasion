@@ -68,6 +68,7 @@ Once the iterations are over the final status of the world have to be printed.
 * File size:
   * Max file size 1GB for 64bit systems, 512MB for 32 bit systems (max hadled size by fs)
   * Max length of the city file: (2^53) -1 characters (max string legth)
+  * Max number of aliens: (2^53) -1 characters (max safe integer)
 * World structure:
   * Routes are bidirectional, but must be defined at both ends
   * The cities never have roads that goes to non-existing cities
