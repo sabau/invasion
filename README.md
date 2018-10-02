@@ -58,9 +58,14 @@ To have a version running in pure JS, along with the definitions file, to build 
 
 # Description
 
-We receive a file with the format defined in ./src/components/World/fixtures/world and a number of aliens to generate. Those aliens, once they met, destroy the city of the meeting and themselves. Movements and initial deployment are totally random, but must follow the world structure.
+We receive a file with the format defined in ./src/components/World/fixtures/world and a number of aliens to generate.
+
+Those aliens, once they met, destroy the city of the meeting and themselves. Movements and initial deployment are totally random, but must follow the world structure.
+
 At each meeting we should print the destroyed city along with the aliens that met. 
+
 We can iterate until we have aliens or cities, at maximum 10000 iterations can occur.
+
 Once the iterations are over the final status of the world have to be printed.
 
 ## Assumptions
