@@ -55,3 +55,33 @@ In order to run all the tests you may run:
 To have a version running in pure JS, along with the definitions file, to build an exportable package, you can run:
 
 `npm build`
+
+# Description
+
+We receive a file with the format defined in ./src/components/World/fixtures/world and a number of aliens to generate.
+
+Those aliens, once they met, destroy the city of the meeting and themselves. Movements and initial deployment are totally random, but must follow the world structure.
+
+At each meeting we should print the destroyed city along with the aliens that met. 
+
+We can iterate until we have aliens or cities, at maximum 10000 iterations can occur.
+
+Once the iterations are over the final status of the world have to be printed.
+
+## Assumptions
+
+* File size:
+  * Max file size 1GB for 64bit systems, 512MB for 32 bit systems (max hadled size by fs)
+  * Max length of the city file: (2^53) -1 characters (max string legth)
+  * Max number of aliens: (2^53) -1 characters (max safe integer)
+* World structure:
+  * Routes are bidirectional, but must be defined at both ends
+  * The cities never have roads that goes to non-existing cities
+  * Rigid world routes: A road coming from north must have been started from south, so on for the other directions
+  * Each city can have up to 4 routes: north, west, south and east
+* Aliens structure:
+  * Aliens are grouped together per city, if a group have more than 1 alien, it disappear along with its city
+  * They move synchronously, we check the meetings only at the end of the round, not intermediate results
+  * The initial distribution must be checked, to eventually destroy cities with multiple aliens
+  * There is no correlation between number of cities and number of aliens
+  * Once an alien find itself in an isolated city, he can be dropped as he won't interfere with others anymore
