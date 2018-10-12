@@ -1,9 +1,9 @@
 import {CityName, destroyCity, World} from '../World';
 import {randomInt} from '../helperes';
 import {Dict} from 'dict';
-import {Status} from '../../app';
 import {Logger} from '../Logger';
 import {omit} from 'lodash';
+import {ApplicationState} from 'src/types';
 
 export type Alien = {
   name: number;
@@ -42,9 +42,9 @@ export const generateAliens = (world: World, aliens: number) => {
  * @param {number} aliens
  * @returns {string}
  */
-export const alienMeetings = (aliens: Dict<Alien[]>, world: World): Status =>
+export const alienMeetings = (aliens: Dict<Alien[]>, world: World): ApplicationState =>
   Object.keys(aliens).reduce(
-    (prev: Status, city) => {
+    (prev: ApplicationState, city) => {
       const alienList = prev.aliens[city];
       if (alienList && alienList.length > 1) {
         Logger.info(
