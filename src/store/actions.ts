@@ -7,7 +7,7 @@ import {AlienMap} from 'components/Alien/Alien';
 export const worldInitAction = createAction<InitPayload>(WORLD.INIT);
 export const worldUpdateAction = createAction<{world: World}>(WORLD.UPDATE);
 export const alienMeetAction = createAction<{aliens: AlienMap; world: World}>(ALIEN.MEET);
-export const alienMoveAction = createAction<{aliens: AlienMap}>(ALIEN.MOVE);
+export const alienMoveAction = createAction<{aliens?: AlienMap}>(ALIEN.MOVE);
 
 export type InitPayload = {
   path: string;
