@@ -19,8 +19,8 @@ const store = configureStore();
  */
 const run = async (argv: CommandLineArgs) => {
   const {path, aliens} = argv;
-  await store.dispatch(worldInitAction({path, aliens}));
-  await store.dispatch(alienMoveAction({}));
+  store.dispatch(worldInitAction({path, aliens}));
+  store.dispatch(alienMoveAction({}));
 };
 
 const getCommandLineArgs = (argv: minimist.ParsedArgs): CommandLineArgs =>
