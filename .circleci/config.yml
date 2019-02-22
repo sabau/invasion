@@ -11,6 +11,12 @@ save_logs: &save_logs
     destination: logs
 
 jobs:
+  tagged:
+    <<: container_config
+    steps:
+      run:
+        name: print stuff
+        command: echo $CIRCLE_TAG
   build:
     <<: *container_config
     steps:
@@ -57,4 +63,14 @@ workflows:
   test-and-build:
     jobs:
      - build
+     - tagged:
+        filters:
+          tags:
+            only:
+              - /^v.*/
+        branches:
+          ignore:
+            - /.*/
+      requires:
+        - setup_dependencies
 
