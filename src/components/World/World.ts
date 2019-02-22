@@ -1,4 +1,4 @@
-import {Dict} from 'dict';
+import {Dict, ReadonlyDict} from 'dict';
 import * as fs from 'fs';
 import {omit} from 'lodash';
 
@@ -17,7 +17,7 @@ export type Routes = {
   [key in keyof typeof Direction]: CityName;
 };
 
-export type World = Dict<City>;
+export type World = ReadonlyDict<City>;
 
 export const removeOpposite: Routes = {
   [Direction.north]: Direction.south,
@@ -64,8 +64,11 @@ export const parseCity = (cityText: string): World => {
  */
 export const initWorld = (path: string): World => {
   let worldData = '';
+  console.log(__dirname, path);
   if (fs.existsSync(path)) {
     worldData = fs.readFileSync(path).toString();
+  } else if (path && fs.existsSync(`${__dirname}/${path}`)) {
+    worldData = fs.readFileSync(`${__dirname}/${path}`).toString();
   }
   return worldData.split('\n').reduce(
     (world: World, currentCity: string) => ({...world, ...parseCity(currentCity)}), {});
@@ -93,7 +96,7 @@ export const validateWorld = (world: World) => {
  * @returns {string}
  */
 export const stringifyRoutes = (routes?: Partial<Routes>) =>
-  routes && Object.keys(routes).length > 0 ?
+  (routes && Object.keys(routes).length > 0) ?
     ` ${Object.keys(routes).map((direction: Direction) =>
       `${direction}=${routes[direction]}`).join(' ')}` : '';
 
