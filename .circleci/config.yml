@@ -12,7 +12,7 @@ save_logs: &save_logs
 
 jobs:
   tagged:
-    <<: container_config
+    <<: *container_config
     steps:
       - run:
           name: print stuff
