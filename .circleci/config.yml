@@ -14,9 +14,9 @@ jobs:
   tagged:
     <<: container_config
     steps:
-      run:
-        name: print stuff
-        command: echo $CIRCLE_TAG
+      - run:
+          name: print stuff
+          command: echo $CIRCLE_TAG
   build:
     <<: *container_config
     steps:
