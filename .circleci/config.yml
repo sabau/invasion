@@ -64,13 +64,11 @@ workflows:
     jobs:
      - build
      - tagged:
-        filters:
-          tags:
-            only:
-              - /^v.*/
-        branches:
-          ignore:
-            - /.*/
-      requires:
-        - setup_dependencies
+         filters:
+           tags:
+             only:
+               - /^v.*/
+         branches:
+           ignore:
+             - /.*/
 
