@@ -62,7 +62,7 @@ workflows:
   version: 2
   test-and-build:
     jobs:
-     - build
+     - build:
          filters:
            tags:
              only:
