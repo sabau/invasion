@@ -7,6 +7,7 @@ Aliens are popping up, will the cities of world X survive?
 There are two ways of running the project:
 * nvm
 * node (system)
+* n
 
 ### nvm
 
