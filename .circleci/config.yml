@@ -64,6 +64,8 @@ workflows:
     jobs:
      - build
      - tagged:
+         requires:
+           - build
          filters:
            tags:
              only:
